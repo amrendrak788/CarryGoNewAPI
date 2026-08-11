@@ -1,0 +1,310 @@
+{
+  "version": "1.0.0",
+  "application": "CarryGo",
+  "description": "Production Database Schema v1",
+  "generatedAt": "",
+
+  "collections": {
+    "users": {
+      "description": "Application Users",
+      "primaryKey": "id",
+      "fields": {
+        "id": "string",
+        "name": "string",
+        "mobile": "string",
+        "password": "string",
+        "email": "string|null",
+        "city": "string",
+        "profilePhoto": "string|null",
+        "selectedRole": "CUSTOMER|TRAVELLER|ADMIN",
+        "isVerified": "boolean",
+        "isBlocked": "boolean",
+        "createdAt": "datetime",
+        "updatedAt": "datetime",
+        "lastLogin": "datetime|null",
+        "createdBy": "string|null",
+        "updatedBy": "string|null",
+        "isDeleted": "boolean",
+        "deletedAt": "datetime|null"
+      }
+    },
+
+    "sessions": {
+      "description": "User Login Sessions",
+      "primaryKey": "token",
+      "fields": {
+        "token": "string",
+        "userId": "string",
+        "device": "string",
+        "deviceId": "string",
+        "ipAddress": "string",
+        "createdAt": "datetime",
+        "expiresAt": "datetime"
+      }
+    },
+
+    "travellerProfiles": {
+      "description": "Traveller Profile",
+      "primaryKey": "id",
+      "fields": {
+        "id": "string",
+        "userId": "string",
+        "rating": "number",
+        "completedTrips": "number",
+        "vehicleType": "BIKE|SCOOTER|CAR|AUTO|BUS|TRAIN|FLIGHT",
+        "vehicleNumber": "string",
+        "maxWeight": "number",
+        "kycVerified": "boolean",
+        "status": "AVAILABLE|BUSY|OFFLINE",
+        "createdAt": "datetime",
+        "updatedAt": "datetime",
+        "createdBy": "string|null",
+        "updatedBy": "string|null",
+        "isDeleted": "boolean",
+        "deletedAt": "datetime|null"
+      }
+    },
+
+    "parcels": {
+      "description": "Customer Parcels",
+      "primaryKey": "id",
+      "fields": {
+        "id": "string",
+        "customerId": "string",
+        "travellerId": "string|null",
+        "bookingId": "string|null",
+        "title": "string",
+        "description": "string",
+        "senderName": "string",
+        "receiverName": "string",
+        "receiverMobile": "string",
+        "weight": "number",
+        "weightUnit": "KG|GRAM",
+        "payout": "number",
+        "currency": "INR",
+
+        "pickup": {
+          "address": "string",
+          "latitude": "number|null",
+          "longitude": "number|null"
+        },
+
+        "drop": {
+          "address": "string",
+          "latitude": "number|null",
+          "longitude": "number|null"
+        },
+
+        "pickupOtp": "string",
+        "pickupOtpVerified": "boolean",
+        "deliveryOtp": "string",
+        "deliveryOtpVerified": "boolean",
+
+        "status": "AVAILABLE|BOOKED|ACCEPTED|PICKED_UP|IN_TRANSIT|DELIVERED|CANCELLED|EXPIRED",
+
+        "createdAt": "datetime",
+        "updatedAt": "datetime",
+        "createdBy": "string|null",
+        "updatedBy": "string|null",
+        "isDeleted": "boolean",
+        "deletedAt": "datetime|null"
+      }
+    },
+
+    "trips": {
+      "description": "Traveller Trips",
+      "primaryKey": "id",
+      "fields": {
+        "id": "string",
+        "travellerId": "string",
+
+        "from": {
+          "address": "string",
+          "latitude": "number|null",
+          "longitude": "number|null"
+        },
+
+        "to": {
+          "address": "string",
+          "latitude": "number|null",
+          "longitude": "number|null"
+        },
+
+        "travelDate": "date",
+        "travelTime": "time",
+        "availableWeight": "number",
+        "pricePerKg": "number",
+        "status": "ACTIVE|STARTED|COMPLETED|CANCELLED",
+
+        "createdAt": "datetime",
+        "updatedAt": "datetime",
+        "createdBy": "string|null",
+        "updatedBy": "string|null",
+        "isDeleted": "boolean",
+        "deletedAt": "datetime|null"
+      }
+    },
+
+    "bookings": {
+      "description": "Parcel Booking",
+      "primaryKey": "id",
+      "fields": {
+        "id": "string",
+        "parcelId": "string",
+        "tripId": "string",
+        "customerId": "string",
+        "travellerId": "string",
+        "status": "REQUESTED|ACCEPTED|REJECTED|CANCELLED|COMPLETED",
+        "requestedAt": "datetime",
+        "acceptedAt": "datetime|null",
+        "completedAt": "datetime|null",
+        "createdAt": "datetime",
+        "updatedAt": "datetime"
+      }
+    },
+
+    "deliveries": {
+      "description": "Parcel Delivery Tracking",
+      "primaryKey": "id",
+      "fields": {
+        "id": "string",
+        "parcelId": "string",
+        "bookingId": "string",
+        "currentStatus": "BOOKED|PICKED_UP|IN_TRANSIT|DELIVERED",
+        "progress": "number",
+
+        "currentLocation": {
+          "latitude": "number|null",
+          "longitude": "number|null"
+        },
+
+        "lastUpdated": "datetime",
+        "history": "array"
+      }
+    },
+
+    "wallets": {
+      "description": "User Wallet",
+      "primaryKey": "id",
+      "fields": {
+        "id": "string",
+        "userId": "string",
+        "balance": "number",
+        "currency": "INR",
+        "updatedAt": "datetime"
+      }
+    },
+
+    "transactions": {
+      "description": "Wallet Transactions",
+      "primaryKey": "id",
+      "fields": {
+        "id": "string",
+        "walletId": "string",
+        "parcelId": "string|null",
+        "bookingId": "string|null",
+        "amount": "number",
+        "paymentMethod": "CASH|UPI|CARD|WALLET",
+        "type": "CREDIT|DEBIT",
+        "status": "PENDING|SUCCESS|FAILED|REFUNDED",
+        "createdAt": "datetime"
+      }
+    },
+
+    "notifications": {
+      "description": "Push Notifications",
+      "primaryKey": "id",
+      "fields": {
+        "id": "string",
+        "userId": "string",
+        "title": "string",
+        "message": "string",
+        "type": "LOGIN|BOOKING|DELIVERY|PAYMENT|SYSTEM|PROMOTION",
+        "isRead": "boolean",
+        "createdAt": "datetime"
+      }
+    },
+
+    "reviews": {
+      "description": "Customer Reviews",
+      "primaryKey": "id",
+      "fields": {
+        "id": "string",
+        "bookingId": "string",
+        "customerId": "string",
+        "travellerId": "string",
+        "rating": "number",
+        "review": "string",
+        "createdAt": "datetime"
+      }
+    },
+
+    "otpLogs": {
+      "description": "OTP Verification Logs",
+      "primaryKey": "id",
+      "fields": {
+        "id": "string",
+        "mobile": "string",
+        "otp": "string",
+        "purpose": "LOGIN|SIGNUP|RESET_PASSWORD",
+        "verified": "boolean",
+        "expiresAt": "datetime",
+        "createdAt": "datetime"
+      }
+    },
+
+    "deviceTokens": {
+      "description": "Firebase Device Tokens",
+      "primaryKey": "id",
+      "fields": {
+        "id": "string",
+        "userId": "string",
+        "platform": "ANDROID|IOS|WEB",
+        "deviceId": "string",
+        "firebaseToken": "string",
+        "createdAt": "datetime"
+      }
+    },
+
+    "supportTickets": {
+      "description": "Customer Support Tickets",
+      "primaryKey": "id",
+      "fields": {
+        "id": "string",
+        "userId": "string",
+        "title": "string",
+        "description": "string",
+        "status": "OPEN|IN_PROGRESS|RESOLVED|CLOSED",
+        "createdAt": "datetime",
+        "updatedAt": "datetime"
+      }
+    },
+
+    "activityLogs": {
+      "description": "System Activity Logs",
+      "primaryKey": "id",
+      "fields": {
+        "id": "string",
+        "userId": "string",
+        "action": "string",
+        "entity": "string",
+        "entityId": "string",
+        "ipAddress": "string",
+        "device": "string",
+        "createdAt": "datetime"
+      }
+    },
+
+    "settings": {
+      "description": "Application Settings",
+      "primaryKey": "version",
+      "fields": {
+        "version": "string",
+        "currency": "INR",
+        "otpExpiry": "number",
+        "maxParcelWeight": "number",
+        "supportEmail": "string"
+      }
+    }
+  }
+}

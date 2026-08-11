@@ -1,0 +1,1502 @@
+{
+  "users": [
+    {
+      "id": "usr_customer_1",
+      "name": "Rakesh Jaiswal",
+      "mobile": "9876543210",
+      "password": "123456",
+      "selectedRole": null,
+      "city": "Delhi"
+    },
+    {
+      "id": "usr_traveller_1",
+      "name": "Aman Kumar",
+      "mobile": "9999999999",
+      "password": "123456",
+      "selectedRole": "traveller",
+      "city": "Delhi NCR",
+      "lastLogin": "2026-08-09T08:28:44.163Z",
+      "updatedAt": "2026-08-09T08:28:44.163Z"
+    },
+    {
+      "id": "usr_msixx2zw_qjrnh7",
+      "name": "Amrendra Gupta",
+      "mobile": "8871819749",
+      "password": "123456",
+      "selectedRole": "customer",
+      "city": "Patna",
+      "lastLogin": "2026-08-09T08:49:08.065Z",
+      "updatedAt": "2026-08-09T08:49:08.065Z"
+    }
+  ],
+  "sessions": [
+    {
+      "id": "ses_msljjf9g_rfowy8",
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJ1c3JfdHJhdmVsbGVyXzEiLCJtb2JpbGUiOiI5OTk5OTk5OTk5IiwiaWF0IjoxNzg2MjY0MTI0LCJleHAiOjE3ODY4Njg5MjR9.x8AWZlAZtWzv-Yw-DdGZzXi_0pLRXEruGMFFXN7CJP8",
+      "userId": "usr_traveller_1",
+      "createdAt": "2026-08-09T08:28:44.164Z"
+    },
+    {
+      "id": "ses_mslk9nmt_fpfjfm",
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJ1c3JfbXNpeHgyendfcWpybmg3IiwibW9iaWxlIjoiODg3MTgxOTc0OSIsImlhdCI6MTc4NjI2NTM0OCwiZXhwIjoxNzg2ODcwMTQ4fQ.fe47PdzWxsxOMbrwyaem30Ho8fJ4DyFxeLm_9ApJlLM",
+      "userId": "usr_msixx2zw_qjrnh7",
+      "createdAt": "2026-08-09T08:49:08.069Z"
+    }
+  ],
+  "travellers": [
+    {
+      "id": "trav_1",
+      "name": "Aman Kumar",
+      "rating": "4.8",
+      "route": "Delhi NCR -> Jaipur",
+      "vehicle": "Car",
+      "priceRange": "Rs 220 - Rs 520",
+      "status": "Available",
+      "slots": 3
+    },
+    {
+      "id": "trav_2",
+      "name": "Neha Sharma",
+      "rating": "4.9",
+      "route": "Gurugram -> Chandigarh",
+      "vehicle": "Shatabdi Train",
+      "priceRange": "Rs 250 - Rs 650",
+      "status": "Available",
+      "slots": 2
+    },
+    {
+      "id": "trav_3",
+      "name": "Rahul Verma",
+      "rating": "4.7",
+      "route": "Noida -> Agra",
+      "vehicle": "SUV",
+      "priceRange": "Rs 180 - Rs 420",
+      "status": "1 slot left",
+      "slots": 1
+    },
+    {
+      "id": "trav_4",
+      "name": "Simran Kaur",
+      "rating": "4.9",
+      "route": "Jaipur -> Udaipur",
+      "vehicle": "Volvo Bus",
+      "priceRange": "Rs 240 - Rs 580",
+      "status": "Available",
+      "slots": 4
+    },
+    {
+      "id": "trav_5",
+      "name": "Vikram Singh",
+      "rating": "4.6",
+      "route": "Delhi -> Lucknow",
+      "vehicle": "Train",
+      "priceRange": "Rs 280 - Rs 720",
+      "status": "KYC verified",
+      "slots": 2
+    }
+  ],
+  "parcels": [
+    {
+      "id": "par_msj5t474_si55pp",
+      "customerId": "usr_msixx2zw_qjrnh7",
+      "travellerId": "usr_traveller_1",
+      "title": "Laptop Bag",
+      "senderName": "Amrendra Gupta",
+      "receiverName": "Rohit Kumar",
+      "pickup": "Patna Junction",
+      "drop": "Gaya Bus Stand",
+      "weight": 2.5,
+      "payout": 350,
+      "badge": "NEW",
+      "note": "Handle with care",
+      "pickupOtp": "4273",
+      "deliveryOtp": "5566",
+      "status": "DELIVERED",
+      "createdAt": "2026-08-07T16:28:49.409Z",
+      "updatedAt": "2026-08-08T11:53:11.356Z",
+      "bookingId": "book_msk8ttru_dqwhuh",
+      "updatedBy": "usr_traveller_1",
+      "pickupOtpVerified": true,
+      "deliveryOtpVerified": true
+    },
+    {
+      "id": "par_1",
+      "title": "Laptop sleeve and charger",
+      "senderName": "Rakesh Jaiswal",
+      "receiverName": "Mohit Jain",
+      "pickup": "Connaught Place, New Delhi",
+      "drop": "C-Scheme, Jaipur",
+      "weight": "1.8 kg",
+      "payout": "Rs 460",
+      "badge": "Verified",
+      "note": "Office item, pickup from reception before 2:00 PM",
+      "pickupOtp": "4921",
+      "deliveryOtp": "8150",
+      "status": "Available",
+      "customerId": "usr_customer_1",
+      "travellerId": null
+    },
+    {
+      "id": "par_2",
+      "title": "Prescription medicine pack",
+      "senderName": "Priya Mehta",
+      "receiverName": "Anjali Mehta",
+      "pickup": "Sector 29, Gurugram",
+      "drop": "Vaishali Nagar, Jaipur",
+      "weight": "0.8 kg",
+      "payout": "Rs 340",
+      "badge": "Urgent",
+      "note": "Keep away from direct sunlight, deliver same day",
+      "pickupOtp": "3814",
+      "deliveryOtp": "6629",
+      "status": "Available",
+      "customerId": "usr_customer_1",
+      "travellerId": null
+    },
+    {
+      "id": "par_3",
+      "title": "CA documents envelope",
+      "senderName": "Nitin Bansal",
+      "receiverName": "Sharma Associates",
+      "pickup": "Noida Sector 62",
+      "drop": "MI Road, Jaipur",
+      "weight": "0.3 kg",
+      "payout": "Rs 260",
+      "badge": "Envelope",
+      "note": "Do not fold, hand over to office desk",
+      "pickupOtp": "1492",
+      "deliveryOtp": "7741",
+      "status": "Accepted",
+      "customerId": "usr_customer_1",
+      "travellerId": "usr_traveller_1"
+    },
+    {
+      "id": "par_4",
+      "title": "Wedding gift hamper",
+      "senderName": "Kavita Soni",
+      "receiverName": "Sonia Agarwal",
+      "pickup": "Karol Bagh, Delhi",
+      "drop": "Bapu Bazaar, Jaipur",
+      "weight": "2.6 kg",
+      "payout": "Rs 540",
+      "badge": "Fragile",
+      "note": "Glass item inside, keep upright",
+      "pickupOtp": "2455",
+      "deliveryOtp": "9861",
+      "status": "Available",
+      "customerId": "usr_customer_1",
+      "travellerId": null
+    },
+    {
+      "id": "par_5",
+      "title": "Exam admit card packet",
+      "senderName": "Deepak Yadav",
+      "receiverName": "Rohit Yadav",
+      "pickup": "Rajouri Garden, Delhi",
+      "drop": "Sector 17, Chandigarh",
+      "weight": "0.2 kg",
+      "payout": "Rs 300",
+      "badge": "Priority",
+      "note": "Important document, call receiver before delivery",
+      "pickupOtp": "6332",
+      "deliveryOtp": "4208",
+      "status": "Available",
+      "customerId": "usr_customer_1",
+      "travellerId": null
+    },
+    {
+      "id": "par_mskhrmro_b0bdd9",
+      "customerId": "usr_msixx2zw_qjrnh7",
+      "travellerId": "usr_traveller_1",
+      "bookingId": "book_mskib7r7_v9kr8a",
+      "title": "Books Parcel",
+      "description": "",
+      "senderName": "Amrendra Gupta",
+      "receiverName": "Amit Kumar",
+      "receiverMobile": null,
+      "weight": 2,
+      "weightUnit": "KG",
+      "payout": 300,
+      "currency": "INR",
+      "pickup": {
+        "address": "Patna Junction",
+        "latitude": null,
+        "longitude": null
+      },
+      "drop": {
+        "address": "Gaya Bus Stand",
+        "latitude": null,
+        "longitude": null
+      },
+      "pickupOtp": null,
+      "pickupOtpVerified": false,
+      "deliveryOtp": null,
+      "deliveryOtpVerified": false,
+      "status": "ACCEPTED",
+      "createdAt": "2026-08-08T14:51:21.732Z",
+      "updatedAt": "2026-08-08T15:20:51.594Z",
+      "createdBy": "usr_msixx2zw_qjrnh7",
+      "updatedBy": "usr_msixx2zw_qjrnh7",
+      "isDeleted": false,
+      "deletedAt": null
+    },
+    {
+      "id": "par_mskjf08z_cuvdz8",
+      "customerId": "usr_msixx2zw_qjrnh7",
+      "travellerId": "usr_traveller_1",
+      "bookingId": "book_mskjmhc9_kv0r0q",
+      "title": "Documents Parcel",
+      "description": "",
+      "senderName": "Amrendra Gupta",
+      "receiverName": "Amit Kumar",
+      "receiverMobile": null,
+      "weight": 1.5,
+      "weightUnit": "KG",
+      "payout": 300,
+      "currency": "INR",
+      "pickup": {
+        "address": "Patna Junction",
+        "latitude": null,
+        "longitude": null
+      },
+      "drop": {
+        "address": "Gaya Bus Stand",
+        "latitude": null,
+        "longitude": null
+      },
+      "pickupOtp": "8086",
+      "pickupOtpVerified": true,
+      "deliveryOtp": "8075",
+      "deliveryOtpVerified": true,
+      "status": "DELIVERED",
+      "createdAt": "2026-08-08T15:37:31.910Z",
+      "updatedAt": "2026-08-08T16:56:27.682Z",
+      "createdBy": "usr_msixx2zw_qjrnh7",
+      "updatedBy": "usr_traveller_1",
+      "isDeleted": false,
+      "deletedAt": null
+    },
+    {
+      "id": "par_msl8tva6_67u0zz",
+      "customerId": "usr_msixx2zw_qjrnh7",
+      "travellerId": null,
+      "bookingId": null,
+      "title": "Refund Test Parcel",
+      "description": "Testing traveller rejection refund",
+      "senderName": "Amrendra Gupta",
+      "receiverName": "Amit Kumar",
+      "receiverMobile": "9876543210",
+      "weight": 1.5,
+      "weightUnit": "KG",
+      "payout": 300,
+      "currency": "INR",
+      "pickup": {
+        "address": "Patna Junction",
+        "latitude": 0,
+        "longitude": 0
+      },
+      "drop": {
+        "address": "Gaya Bus Stand",
+        "latitude": 0,
+        "longitude": 0
+      },
+      "pickupOtp": "6061",
+      "pickupOtpVerified": false,
+      "deliveryOtp": "4883",
+      "deliveryOtpVerified": false,
+      "status": "AVAILABLE",
+      "createdAt": "2026-08-09T03:28:55.711Z",
+      "updatedAt": "2026-08-09T03:36:43.894Z",
+      "createdBy": "usr_msixx2zw_qjrnh7",
+      "updatedBy": "usr_msixx2zw_qjrnh7",
+      "isDeleted": false,
+      "deletedAt": null
+    },
+    {
+      "id": "par_mslaqn98_zp8boz",
+      "customerId": "usr_msixx2zw_qjrnh7",
+      "travellerId": null,
+      "bookingId": null,
+      "title": "Refund Test Parcel again",
+      "description": "Testing traveller rejection refund whole cycle",
+      "senderName": "Amrendra Gupta",
+      "receiverName": "Amit Kumar",
+      "receiverMobile": "9876543210",
+      "weight": 1.5,
+      "weightUnit": "KG",
+      "payout": 300,
+      "currency": "INR",
+      "pickup": {
+        "address": "Patna Junction",
+        "latitude": 0,
+        "longitude": 0
+      },
+      "drop": {
+        "address": "Gaya Bus Stand",
+        "latitude": 0,
+        "longitude": 0
+      },
+      "pickupOtp": "6021",
+      "pickupOtpVerified": false,
+      "deliveryOtp": "4297",
+      "deliveryOtpVerified": false,
+      "status": "AVAILABLE",
+      "createdAt": "2026-08-09T04:22:24.572Z",
+      "updatedAt": "2026-08-09T04:26:47.512Z",
+      "createdBy": "usr_msixx2zw_qjrnh7",
+      "updatedBy": "usr_msixx2zw_qjrnh7",
+      "isDeleted": false,
+      "deletedAt": null
+    },
+    {
+      "id": "par_mslbi4mw_jo5mz8",
+      "customerId": "usr_msixx2zw_qjrnh7",
+      "travellerId": null,
+      "bookingId": null,
+      "title": "Refund Test Parcel again again",
+      "description": "Testing traveller rejection refund whole cycle again",
+      "senderName": "Amrendra Gupta",
+      "receiverName": "Amit Kumar",
+      "receiverMobile": "9876543210",
+      "weight": 1.5,
+      "weightUnit": "KG",
+      "payout": 300,
+      "currency": "INR",
+      "pickup": {
+        "address": "Patna Junction",
+        "latitude": 0,
+        "longitude": 0
+      },
+      "drop": {
+        "address": "Gaya Bus Stand",
+        "latitude": 0,
+        "longitude": 0
+      },
+      "pickupOtp": "9746",
+      "pickupOtpVerified": false,
+      "deliveryOtp": "6351",
+      "deliveryOtpVerified": false,
+      "status": "AVAILABLE",
+      "createdAt": "2026-08-09T04:43:46.808Z",
+      "updatedAt": "2026-08-09T04:45:37.845Z",
+      "createdBy": "usr_msixx2zw_qjrnh7",
+      "updatedBy": "usr_msixx2zw_qjrnh7",
+      "isDeleted": false,
+      "deletedAt": null
+    },
+    {
+      "id": "par_mslbsq39_z5op37",
+      "customerId": "usr_msixx2zw_qjrnh7",
+      "travellerId": null,
+      "bookingId": null,
+      "title": "Refund Test Parcel again again again",
+      "description": "Testing traveller rejection refund whole cycle again again",
+      "senderName": "Amrendra Gupta",
+      "receiverName": "Amit Kumar",
+      "receiverMobile": "9876543210",
+      "weight": 1.5,
+      "weightUnit": "KG",
+      "payout": 300,
+      "currency": "INR",
+      "pickup": {
+        "address": "Patna Junction",
+        "latitude": 0,
+        "longitude": 0
+      },
+      "drop": {
+        "address": "Gaya Bus Stand",
+        "latitude": 0,
+        "longitude": 0
+      },
+      "pickupOtp": "3974",
+      "pickupOtpVerified": false,
+      "deliveryOtp": "5093",
+      "deliveryOtpVerified": false,
+      "status": "AVAILABLE",
+      "createdAt": "2026-08-09T04:52:01.173Z",
+      "updatedAt": "2026-08-09T04:52:01.173Z",
+      "createdBy": "usr_msixx2zw_qjrnh7",
+      "updatedBy": "usr_msixx2zw_qjrnh7",
+      "isDeleted": false,
+      "deletedAt": null
+    },
+    {
+      "id": "par_mslgnq2s_m6o1za",
+      "customerId": "usr_msixx2zw_qjrnh7",
+      "travellerId": null,
+      "bookingId": null,
+      "title": "Refund Test Parcel again again again again ",
+      "description": "Testing traveller rejection refund whole cycle again again again",
+      "senderName": "Amrendra Gupta",
+      "receiverName": "Amit Kumar",
+      "receiverMobile": "9876543210",
+      "weight": 1.5,
+      "weightUnit": "KG",
+      "payout": 300,
+      "currency": "INR",
+      "pickup": {
+        "address": "Patna Junction",
+        "latitude": 0,
+        "longitude": 0
+      },
+      "drop": {
+        "address": "Gaya Bus Stand",
+        "latitude": 0,
+        "longitude": 0
+      },
+      "pickupOtp": "5165",
+      "pickupOtpVerified": false,
+      "deliveryOtp": "7439",
+      "deliveryOtpVerified": false,
+      "status": "AVAILABLE",
+      "createdAt": "2026-08-09T07:08:05.957Z",
+      "updatedAt": "2026-08-09T07:08:05.957Z",
+      "createdBy": "usr_msixx2zw_qjrnh7",
+      "updatedBy": "usr_msixx2zw_qjrnh7",
+      "isDeleted": false,
+      "deletedAt": null
+    },
+    {
+      "id": "par_mslhbz3g_tgyhpu",
+      "customerId": "usr_msixx2zw_qjrnh7",
+      "travellerId": null,
+      "bookingId": null,
+      "title": "Refund Test Parcel again again again again ",
+      "description": "Testing traveller rejection refund whole cycle again again again",
+      "senderName": "Amrendra Gupta",
+      "receiverName": "Amit Kumar",
+      "receiverMobile": "9876543210",
+      "weight": 1.5,
+      "weightUnit": "KG",
+      "payout": 300,
+      "currency": "INR",
+      "pickup": {
+        "address": "Patna Junction",
+        "latitude": 0,
+        "longitude": 0
+      },
+      "drop": {
+        "address": "Gaya Bus Stand",
+        "latitude": 0,
+        "longitude": 0
+      },
+      "pickupOtp": "5043",
+      "pickupOtpVerified": false,
+      "deliveryOtp": "2014",
+      "deliveryOtpVerified": false,
+      "status": "AVAILABLE",
+      "createdAt": "2026-08-09T07:26:57.388Z",
+      "updatedAt": "2026-08-09T07:26:57.388Z",
+      "createdBy": "usr_msixx2zw_qjrnh7",
+      "updatedBy": "usr_msixx2zw_qjrnh7",
+      "isDeleted": false,
+      "deletedAt": null
+    },
+    {
+      "id": "par_mslhiz3n_gottaq",
+      "customerId": "usr_msixx2zw_qjrnh7",
+      "travellerId": "usr_traveller_1",
+      "bookingId": "book_mslhn9hl_6071ty",
+      "title": "Payout Atomic Test",
+      "description": "Testing atomic traveller payout",
+      "senderName": "Amrendra Gupta",
+      "receiverName": "Amit Kumar",
+      "receiverMobile": "9876543210",
+      "weight": 1.5,
+      "weightUnit": "KG",
+      "payout": 300,
+      "currency": "INR",
+      "pickup": {
+        "address": "Patna Junction",
+        "latitude": 0,
+        "longitude": 0
+      },
+      "drop": {
+        "address": "Gaya Bus Stand",
+        "latitude": 0,
+        "longitude": 0
+      },
+      "pickupOtp": "5159",
+      "pickupOtpVerified": true,
+      "deliveryOtp": "7571",
+      "deliveryOtpVerified": true,
+      "status": "DELIVERED",
+      "createdAt": "2026-08-09T07:32:23.987Z",
+      "updatedAt": "2026-08-09T07:40:48.214Z",
+      "createdBy": "usr_msixx2zw_qjrnh7",
+      "updatedBy": "usr_traveller_1",
+      "isDeleted": false,
+      "deletedAt": null
+    },
+    {
+      "id": "par_msli7s16_jag1p2",
+      "customerId": "usr_msixx2zw_qjrnh7",
+      "travellerId": "usr_traveller_1",
+      "bookingId": "book_msliclc7_z5pb3r",
+      "title": "Negative OTP Test",
+      "description": "Testing invalid pickup OTP",
+      "senderName": "Amrendra Gupta",
+      "receiverName": "Amit Kumar",
+      "receiverMobile": "9876543210",
+      "weight": 1.5,
+      "weightUnit": "KG",
+      "payout": 300,
+      "currency": "INR",
+      "pickup": {
+        "address": "Patna Junction",
+        "latitude": 0,
+        "longitude": 0
+      },
+      "drop": {
+        "address": "Gaya Bus Stand",
+        "latitude": 0,
+        "longitude": 0
+      },
+      "pickupOtp": "5552",
+      "pickupOtpVerified": true,
+      "deliveryOtp": "9365",
+      "deliveryOtpVerified": true,
+      "status": "DELIVERED",
+      "createdAt": "2026-08-09T07:51:41.226Z",
+      "updatedAt": "2026-08-09T08:25:12.460Z",
+      "createdBy": "usr_msixx2zw_qjrnh7",
+      "updatedBy": "usr_traveller_1",
+      "isDeleted": false,
+      "deletedAt": null
+    },
+    {
+      "id": "par_msljmu5q_hg5z2k",
+      "customerId": "usr_msixx2zw_qjrnh7",
+      "travellerId": null,
+      "bookingId": null,
+      "title": "Insufficient Balance Test",
+      "description": "Testing insufficient wallet balance",
+      "senderName": "Amrendra Gupta",
+      "receiverName": "Amit Kumar",
+      "receiverMobile": "9876543210",
+      "weight": 1.5,
+      "weightUnit": "KG",
+      "payout": 300,
+      "currency": "INR",
+      "pickup": {
+        "address": "Patna Junction",
+        "latitude": 0,
+        "longitude": 0
+      },
+      "drop": {
+        "address": "Gaya Bus Stand",
+        "latitude": 0,
+        "longitude": 0
+      },
+      "pickupOtp": "9664",
+      "pickupOtpVerified": false,
+      "deliveryOtp": "2690",
+      "deliveryOtpVerified": false,
+      "status": "AVAILABLE",
+      "createdAt": "2026-08-09T08:31:23.438Z",
+      "updatedAt": "2026-08-09T08:31:23.438Z",
+      "createdBy": "usr_msixx2zw_qjrnh7",
+      "updatedBy": "usr_msixx2zw_qjrnh7",
+      "isDeleted": false,
+      "deletedAt": null
+    },
+    {
+      "id": "par_msljzs6k_go07i4",
+      "customerId": "usr_msixx2zw_qjrnh7",
+      "travellerId": null,
+      "bookingId": null,
+      "title": "Customer Cancel Refund Test",
+      "description": "Testing customer cancellation refund",
+      "senderName": "Amrendra Gupta",
+      "receiverName": "Amit Kumar",
+      "receiverMobile": "9876543210",
+      "weight": 1.5,
+      "weightUnit": "KG",
+      "payout": 300,
+      "currency": "INR",
+      "pickup": {
+        "address": "Patna Junction",
+        "latitude": 0,
+        "longitude": 0
+      },
+      "drop": {
+        "address": "Gaya Bus Stand",
+        "latitude": 0,
+        "longitude": 0
+      },
+      "pickupOtp": "6290",
+      "pickupOtpVerified": false,
+      "deliveryOtp": "8377",
+      "deliveryOtpVerified": false,
+      "status": "AVAILABLE",
+      "createdAt": "2026-08-09T08:41:27.404Z",
+      "updatedAt": "2026-08-09T08:49:58.218Z",
+      "createdBy": "usr_msixx2zw_qjrnh7",
+      "updatedBy": "usr_msixx2zw_qjrnh7",
+      "isDeleted": false,
+      "deletedAt": null
+    }
+  ],
+  "trips": [
+    {
+      "id": "trip_1",
+      "travellerId": "usr_traveller_1",
+      "from": "Delhi",
+      "to": "Jaipur",
+      "time": "Today, 11:30 AM",
+      "distance": "281 km",
+      "matches": "4 matching parcels",
+      "status": "ACTIVE",
+      "availableWeight": 22.5,
+      "updatedAt": "2026-08-09T07:56:35.768Z"
+    },
+    {
+      "id": "trip_2",
+      "travellerId": "usr_traveller_1",
+      "from": "Jaipur",
+      "to": "Udaipur",
+      "time": "Tomorrow, 8:00 AM",
+      "distance": "395 km",
+      "matches": "2 matching parcels",
+      "status": "Scheduled"
+    },
+    {
+      "id": "trip_3",
+      "travellerId": "usr_traveller_1",
+      "from": "Delhi",
+      "to": "Chandigarh",
+      "time": "Wed, 6:45 AM",
+      "distance": "244 km",
+      "matches": "1 matching parcel",
+      "status": "Scheduled"
+    },
+    {
+      "id": "trip_4",
+      "travellerId": "usr_traveller_1",
+      "from": "Noida",
+      "to": "Agra",
+      "time": "Fri, 7:20 AM",
+      "distance": "190 km",
+      "matches": "1 matching parcel",
+      "status": "Completed"
+    }
+  ],
+  "deliveries": [
+    {
+      "id": "del_msj5t476_g9wvds",
+      "parcelId": "par_msj5t474_si55pp",
+      "parcel": "Laptop Bag",
+      "route": "Patna Junction → Gaya Bus Stand",
+      "state": "DELIVERED",
+      "progress": 100,
+      "meta": "Parcel delivered",
+      "nextAction": "VIEW_RECEIPT",
+      "earning": 350,
+      "createdAt": "2026-08-07T16:28:49.410Z",
+      "bookingId": "book_msk8ttru_dqwhuh",
+      "currentStatus": "DELIVERED",
+      "lastUpdated": "2026-08-08T11:53:11.361Z",
+      "history": [
+        {
+          "status": "ACCEPTED",
+          "location": null,
+          "timestamp": "2026-08-08T11:06:28.805Z"
+        },
+        {
+          "status": "PICKED_UP",
+          "location": "Patna Junction",
+          "timestamp": "2026-08-08T11:36:30.706Z"
+        },
+        {
+          "status": "IN_TRANSIT",
+          "location": "Patna Junction",
+          "timestamp": "2026-08-08T11:44:02.898Z"
+        },
+        {
+          "status": "DELIVERED",
+          "location": "Gaya Bus Stand",
+          "timestamp": "2026-08-08T11:53:11.359Z"
+        }
+      ]
+    },
+    {
+      "id": "del_1",
+      "parcelId": "par_2",
+      "parcel": "Prescription medicine pack",
+      "route": "Sector 29, Gurugram to Vaishali Nagar, Jaipur",
+      "state": "Picked up",
+      "meta": "ETA 7:45 PM, temperature safe pouch verified",
+      "progress": 55,
+      "nextAction": "Mark in transit",
+      "earning": "Rs 340"
+    },
+    {
+      "id": "del_2",
+      "parcelId": "par_1",
+      "parcel": "Laptop sleeve and charger",
+      "route": "Connaught Place, New Delhi to C-Scheme, Jaipur",
+      "state": "Booked",
+      "meta": "Waiting for traveller",
+      "progress": 15,
+      "nextAction": "Book traveller",
+      "earning": "Rs 460"
+    },
+    {
+      "id": "del_3",
+      "parcelId": "par_3",
+      "parcel": "CA documents envelope",
+      "route": "Noida Sector 62 to MI Road, Jaipur",
+      "state": "Accepted",
+      "meta": "Pickup OTP 1492 shared with sender",
+      "progress": 30,
+      "nextAction": "Verify pickup",
+      "earning": "Rs 260"
+    },
+    {
+      "id": "del_4",
+      "parcelId": "par_6",
+      "parcel": "Books parcel",
+      "route": "Delhi University North Campus to Kota Hostel Area",
+      "state": "Delivered",
+      "meta": "Delivered at 6:35 PM, payment released",
+      "progress": 100,
+      "nextAction": "View receipt",
+      "earning": "Rs 390"
+    },
+    {
+      "id": "del_mskhrmrp_f4gy8v",
+      "parcelId": "par_mskhrmro_b0bdd9",
+      "bookingId": "book_mskib7r7_v9kr8a",
+      "currentStatus": "ACCEPTED",
+      "progress": 20,
+      "currentLocation": {
+        "latitude": null,
+        "longitude": null
+      },
+      "lastUpdated": "2026-08-08T15:20:51.612Z",
+      "history": [
+        {
+          "status": "BOOKED",
+          "location": "Patna Junction",
+          "timestamp": "2026-08-08T14:51:21.733Z"
+        },
+        {
+          "status": "ACCEPTED",
+          "location": null,
+          "timestamp": "2026-08-08T15:20:51.612Z"
+        }
+      ],
+      "state": "ACCEPTED",
+      "nextAction": "VERIFY_PICKUP",
+      "meta": "Traveller accepted booking"
+    },
+    {
+      "id": "del_mskjf093_ldyqwr",
+      "parcelId": "par_mskjf08z_cuvdz8",
+      "bookingId": "book_mskjmhc9_kv0r0q",
+      "currentStatus": "DELIVERED",
+      "progress": 100,
+      "currentLocation": {
+        "latitude": null,
+        "longitude": null
+      },
+      "lastUpdated": "2026-08-08T16:56:27.695Z",
+      "history": [
+        {
+          "status": "BOOKED",
+          "location": "Patna Junction",
+          "timestamp": "2026-08-08T15:37:31.912Z"
+        },
+        {
+          "status": "ACCEPTED",
+          "location": null,
+          "timestamp": "2026-08-08T15:44:36.283Z"
+        },
+        {
+          "status": "PICKED_UP",
+          "location": {
+            "address": "Patna Junction",
+            "latitude": null,
+            "longitude": null
+          },
+          "timestamp": "2026-08-08T16:38:58.685Z"
+        },
+        {
+          "status": "IN_TRANSIT",
+          "location": "Patna Junction",
+          "timestamp": "2026-08-08T16:48:01.388Z"
+        },
+        {
+          "status": "DELIVERED",
+          "location": null,
+          "timestamp": "2026-08-08T16:56:27.689Z"
+        }
+      ],
+      "state": "DELIVERED",
+      "nextAction": "VIEW_RECEIPT",
+      "meta": "Parcel delivered"
+    },
+    {
+      "id": "del_msl8tva9_bf0spx",
+      "parcelId": "par_msl8tva6_67u0zz",
+      "bookingId": "book_msl91tjs_jef1tj",
+      "currentStatus": "BOOKED",
+      "progress": 10,
+      "currentLocation": {
+        "latitude": 0,
+        "longitude": 0
+      },
+      "lastUpdated": "2026-08-09T03:35:06.727Z",
+      "history": [
+        {
+          "status": "BOOKED",
+          "location": "Patna Junction",
+          "timestamp": "2026-08-09T03:28:55.713Z"
+        }
+      ]
+    },
+    {
+      "id": "del_mslaqn9a_k9fo5h",
+      "parcelId": "par_mslaqn98_zp8boz",
+      "bookingId": null,
+      "currentStatus": "CANCELLED",
+      "progress": 0,
+      "currentLocation": {
+        "latitude": 0,
+        "longitude": 0
+      },
+      "lastUpdated": "2026-08-09T04:26:47.518Z",
+      "history": [
+        {
+          "status": "BOOKED",
+          "location": "Patna Junction",
+          "timestamp": "2026-08-09T04:22:24.574Z"
+        }
+      ],
+      "state": "CANCELLED",
+      "nextAction": "BOOK_TRAVELLER",
+      "meta": "Traveller rejected booking"
+    },
+    {
+      "id": "del_mslbi4n1_rioqit",
+      "parcelId": "par_mslbi4mw_jo5mz8",
+      "bookingId": null,
+      "currentStatus": "CANCELLED",
+      "progress": 0,
+      "currentLocation": {
+        "latitude": 0,
+        "longitude": 0
+      },
+      "lastUpdated": "2026-08-09T04:45:37.845Z",
+      "history": [
+        {
+          "status": "BOOKED",
+          "location": "Patna Junction",
+          "timestamp": "2026-08-09T04:43:46.813Z"
+        }
+      ],
+      "state": "CANCELLED",
+      "nextAction": "BOOK_TRAVELLER",
+      "meta": "Traveller rejected booking"
+    },
+    {
+      "id": "del_mslbsq3b_33stwv",
+      "parcelId": "par_mslbsq39_z5op37",
+      "bookingId": null,
+      "currentStatus": "BOOKED",
+      "progress": 10,
+      "currentLocation": {
+        "latitude": 0,
+        "longitude": 0
+      },
+      "lastUpdated": "2026-08-09T04:52:01.175Z",
+      "history": [
+        {
+          "status": "BOOKED",
+          "location": "Patna Junction",
+          "timestamp": "2026-08-09T04:52:01.175Z"
+        }
+      ]
+    },
+    {
+      "id": "del_mslgnq2v_wzr703",
+      "parcelId": "par_mslgnq2s_m6o1za",
+      "bookingId": null,
+      "currentStatus": "BOOKED",
+      "progress": 10,
+      "currentLocation": {
+        "latitude": 0,
+        "longitude": 0
+      },
+      "lastUpdated": "2026-08-09T07:08:05.959Z",
+      "history": [
+        {
+          "status": "BOOKED",
+          "location": "Patna Junction",
+          "timestamp": "2026-08-09T07:08:05.959Z"
+        }
+      ]
+    },
+    {
+      "id": "del_mslhbz3j_jekz94",
+      "parcelId": "par_mslhbz3g_tgyhpu",
+      "bookingId": null,
+      "currentStatus": "BOOKED",
+      "progress": 10,
+      "currentLocation": {
+        "latitude": 0,
+        "longitude": 0
+      },
+      "lastUpdated": "2026-08-09T07:26:57.391Z",
+      "history": [
+        {
+          "status": "BOOKED",
+          "location": "Patna Junction",
+          "timestamp": "2026-08-09T07:26:57.391Z"
+        }
+      ]
+    },
+    {
+      "id": "del_mslhiz3q_bqqu16",
+      "parcelId": "par_mslhiz3n_gottaq",
+      "bookingId": "book_mslhn9hl_6071ty",
+      "currentStatus": "DELIVERED",
+      "progress": 100,
+      "currentLocation": {
+        "latitude": 0,
+        "longitude": 0
+      },
+      "lastUpdated": "2026-08-09T07:40:48.227Z",
+      "history": [
+        {
+          "status": "BOOKED",
+          "location": "Patna Junction",
+          "timestamp": "2026-08-09T07:32:23.990Z"
+        },
+        {
+          "status": "ACCEPTED",
+          "location": null,
+          "timestamp": "2026-08-09T07:37:05.476Z"
+        },
+        {
+          "status": "PICKED_UP",
+          "location": {
+            "address": "Patna Junction",
+            "latitude": 0,
+            "longitude": 0
+          },
+          "timestamp": "2026-08-09T07:38:38.120Z"
+        },
+        {
+          "status": "IN_TRANSIT",
+          "location": null,
+          "timestamp": "2026-08-09T07:39:47.950Z"
+        },
+        {
+          "status": "DELIVERED",
+          "location": {
+            "address": "Gaya Bus Stand",
+            "latitude": 0,
+            "longitude": 0
+          },
+          "timestamp": "2026-08-09T07:40:48.221Z"
+        }
+      ],
+      "state": "DELIVERED",
+      "nextAction": "VIEW_RECEIPT",
+      "meta": "Parcel delivered"
+    },
+    {
+      "id": "del_msli7s19_i4j2xt",
+      "parcelId": "par_msli7s16_jag1p2",
+      "bookingId": "book_msliclc7_z5pb3r",
+      "currentStatus": "DELIVERED",
+      "progress": 100,
+      "currentLocation": {
+        "latitude": 0,
+        "longitude": 0
+      },
+      "lastUpdated": "2026-08-09T08:25:12.470Z",
+      "history": [
+        {
+          "status": "BOOKED",
+          "location": "Patna Junction",
+          "timestamp": "2026-08-09T07:51:41.229Z"
+        },
+        {
+          "status": "ACCEPTED",
+          "location": null,
+          "timestamp": "2026-08-09T07:56:35.789Z"
+        },
+        {
+          "status": "PICKED_UP",
+          "location": {
+            "address": "Patna Junction",
+            "latitude": 0,
+            "longitude": 0
+          },
+          "timestamp": "2026-08-09T08:03:03.566Z"
+        },
+        {
+          "status": "IN_TRANSIT",
+          "location": null,
+          "timestamp": "2026-08-09T08:22:08.763Z"
+        },
+        {
+          "status": "DELIVERED",
+          "location": {
+            "address": "Gaya Bus Stand",
+            "latitude": 0,
+            "longitude": 0
+          },
+          "timestamp": "2026-08-09T08:25:12.465Z"
+        }
+      ],
+      "state": "DELIVERED",
+      "nextAction": "VIEW_RECEIPT",
+      "meta": "Parcel delivered"
+    },
+    {
+      "id": "del_msljmu5r_l4kj5f",
+      "parcelId": "par_msljmu5q_hg5z2k",
+      "bookingId": null,
+      "currentStatus": "BOOKED",
+      "progress": 10,
+      "currentLocation": {
+        "latitude": 0,
+        "longitude": 0
+      },
+      "lastUpdated": "2026-08-09T08:31:23.439Z",
+      "history": [
+        {
+          "status": "BOOKED",
+          "location": "Patna Junction",
+          "timestamp": "2026-08-09T08:31:23.439Z"
+        }
+      ]
+    },
+    {
+      "id": "del_msljzs6l_t4hs10",
+      "parcelId": "par_msljzs6k_go07i4",
+      "bookingId": null,
+      "currentStatus": "CANCELLED",
+      "progress": 0,
+      "currentLocation": {
+        "latitude": 0,
+        "longitude": 0
+      },
+      "lastUpdated": "2026-08-09T08:49:58.223Z",
+      "history": [
+        {
+          "status": "BOOKED",
+          "location": "Patna Junction",
+          "timestamp": "2026-08-09T08:41:27.405Z"
+        }
+      ],
+      "state": "CANCELLED",
+      "nextAction": "BOOK_TRAVELLER",
+      "meta": "Customer cancelled booking"
+    }
+  ],
+  "travellerProfiles": [
+    {
+      "id": "trav_1",
+      "userId": "usr_traveller_1",
+      "rating": 4.8,
+      "completedTrips": 46,
+      "vehicleType": "CAR",
+      "vehicleNumber": "DL01AB1234",
+      "maxWeight": 30,
+      "kycVerified": true,
+      "status": "AVAILABLE",
+      "createdAt": "2026-08-08T00:00:00.000Z",
+      "updatedAt": "2026-08-09T08:28:59.206Z",
+      "createdBy": null,
+      "updatedBy": null,
+      "isDeleted": false,
+      "deletedAt": null
+    }
+  ],
+  "bookings": [
+    {
+      "id": "book_msk8ttru_dqwhuh",
+      "parcelId": "par_msj5t474_si55pp",
+      "tripId": "trip_1",
+      "customerId": "usr_msixx2zw_qjrnh7",
+      "travellerId": "usr_traveller_1",
+      "status": "COMPLETED",
+      "requestedAt": "2026-08-08T10:41:07.578Z",
+      "acceptedAt": "2026-08-08T11:06:28.796Z",
+      "rejectedAt": null,
+      "cancelledAt": null,
+      "completedAt": "2026-08-08T11:53:11.363Z",
+      "createdAt": "2026-08-08T10:41:07.578Z",
+      "updatedAt": "2026-08-08T11:53:11.363Z"
+    },
+    {
+      "id": "book_mskib7r7_v9kr8a",
+      "parcelId": "par_mskhrmro_b0bdd9",
+      "tripId": "trip_1",
+      "customerId": "usr_msixx2zw_qjrnh7",
+      "travellerId": "usr_traveller_1",
+      "status": "ACCEPTED",
+      "requestedAt": "2026-08-08T15:06:35.396Z",
+      "acceptedAt": "2026-08-08T15:20:51.592Z",
+      "rejectedAt": null,
+      "cancelledAt": null,
+      "completedAt": null,
+      "createdAt": "2026-08-08T15:06:35.396Z",
+      "updatedAt": "2026-08-08T15:20:51.592Z"
+    },
+    {
+      "id": "book_mskjmhc9_kv0r0q",
+      "parcelId": "par_mskjf08z_cuvdz8",
+      "tripId": "trip_1",
+      "customerId": "usr_msixx2zw_qjrnh7",
+      "travellerId": "usr_traveller_1",
+      "status": "COMPLETED",
+      "requestedAt": "2026-08-08T15:43:20.649Z",
+      "acceptedAt": "2026-08-08T15:44:36.266Z",
+      "rejectedAt": null,
+      "cancelledAt": null,
+      "completedAt": "2026-08-08T16:56:27.702Z",
+      "createdAt": "2026-08-08T15:43:20.649Z",
+      "updatedAt": "2026-08-08T16:56:27.702Z"
+    },
+    {
+      "id": "book_msl91tjs_jef1tj",
+      "parcelId": "par_msl8tva6_67u0zz",
+      "tripId": "trip_1",
+      "customerId": "usr_msixx2zw_qjrnh7",
+      "travellerId": "usr_traveller_1",
+      "status": "REJECTED",
+      "requestedAt": "2026-08-09T03:35:06.712Z",
+      "acceptedAt": null,
+      "rejectedAt": "2026-08-09T03:36:43.892Z",
+      "cancelledAt": null,
+      "completedAt": null,
+      "createdAt": "2026-08-09T03:35:06.712Z",
+      "updatedAt": "2026-08-09T03:36:43.892Z"
+    },
+    {
+      "id": "book_mslauwqx_2ztbs5",
+      "parcelId": "par_mslaqn98_zp8boz",
+      "tripId": "trip_1",
+      "customerId": "usr_msixx2zw_qjrnh7",
+      "travellerId": "usr_traveller_1",
+      "status": "REJECTED",
+      "requestedAt": "2026-08-09T04:25:43.497Z",
+      "acceptedAt": null,
+      "rejectedAt": "2026-08-09T04:26:47.510Z",
+      "cancelledAt": null,
+      "completedAt": null,
+      "createdAt": "2026-08-09T04:25:43.497Z",
+      "updatedAt": "2026-08-09T04:26:47.510Z"
+    },
+    {
+      "id": "book_mslbjvbb_aqjsmt",
+      "parcelId": "par_mslbi4mw_jo5mz8",
+      "tripId": "trip_1",
+      "customerId": "usr_msixx2zw_qjrnh7",
+      "travellerId": "usr_traveller_1",
+      "status": "REJECTED",
+      "requestedAt": "2026-08-09T04:45:08.039Z",
+      "acceptedAt": null,
+      "rejectedAt": "2026-08-09T04:45:37.844Z",
+      "cancelledAt": null,
+      "completedAt": null,
+      "createdAt": "2026-08-09T04:45:08.039Z",
+      "updatedAt": "2026-08-09T04:45:37.844Z"
+    },
+    {
+      "id": "book_mslhn9hl_6071ty",
+      "parcelId": "par_mslhiz3n_gottaq",
+      "tripId": "trip_1",
+      "customerId": "usr_msixx2zw_qjrnh7",
+      "travellerId": "usr_traveller_1",
+      "status": "COMPLETED",
+      "requestedAt": "2026-08-09T07:35:44.073Z",
+      "acceptedAt": "2026-08-09T07:37:05.462Z",
+      "rejectedAt": null,
+      "cancelledAt": null,
+      "completedAt": "2026-08-09T07:40:48.230Z",
+      "createdAt": "2026-08-09T07:35:44.073Z",
+      "updatedAt": "2026-08-09T07:40:48.230Z"
+    },
+    {
+      "id": "book_msliclc7_z5pb3r",
+      "parcelId": "par_msli7s16_jag1p2",
+      "tripId": "trip_1",
+      "customerId": "usr_msixx2zw_qjrnh7",
+      "travellerId": "usr_traveller_1",
+      "status": "COMPLETED",
+      "requestedAt": "2026-08-09T07:55:25.831Z",
+      "acceptedAt": "2026-08-09T07:56:35.757Z",
+      "rejectedAt": null,
+      "cancelledAt": null,
+      "completedAt": "2026-08-09T08:25:12.474Z",
+      "createdAt": "2026-08-09T07:55:25.831Z",
+      "updatedAt": "2026-08-09T08:25:12.474Z"
+    },
+    {
+      "id": "book_mslk3cdb_7vjykw",
+      "parcelId": "par_msljzs6k_go07i4",
+      "tripId": "trip_1",
+      "customerId": "usr_msixx2zw_qjrnh7",
+      "travellerId": "usr_traveller_1",
+      "status": "CANCELLED",
+      "requestedAt": "2026-08-09T08:44:13.535Z",
+      "acceptedAt": null,
+      "rejectedAt": null,
+      "cancelledAt": "2026-08-09T08:49:58.215Z",
+      "completedAt": null,
+      "createdAt": "2026-08-09T08:44:13.535Z",
+      "updatedAt": "2026-08-09T08:49:58.215Z"
+    }
+  ],
+  "wallets": [
+    {
+      "id": "wal_customer_1",
+      "userId": "usr_msixx2zw_qjrnh7",
+      "balance": 500,
+      "holdBalance": 1200,
+      "currency": "INR",
+      "status": "ACTIVE",
+      "createdAt": "2026-08-08T00:00:00.000Z",
+      "updatedAt": "2026-08-09T08:49:58.210Z",
+      "isDeleted": false,
+      "deletedAt": null
+    },
+    {
+      "id": "wal_traveller_1",
+      "userId": "usr_traveller_1",
+      "balance": 1250,
+      "holdBalance": 0,
+      "currency": "INR",
+      "status": "ACTIVE",
+      "createdAt": "2026-08-08T00:00:00.000Z",
+      "updatedAt": "2026-08-09T08:28:59.206Z",
+      "isDeleted": false,
+      "deletedAt": null
+    }
+  ],
+  "transactions": [
+    {
+      "id": "txn_1786191421085",
+      "walletId": "wal_traveller_1",
+      "parcelId": "par_msj5t474_si55pp",
+      "bookingId": "book_msk8ttru_dqwhuh",
+      "amount": 350,
+      "paymentMethod": "WALLET",
+      "type": "CREDIT",
+      "status": "SUCCESS",
+      "createdAt": "2026-08-08T12:17:01.085Z"
+    },
+    {
+      "id": "txn_1786200807742",
+      "walletId": "wal_customer_1",
+      "parcelId": "par_mskhrmro_b0bdd9",
+      "bookingId": "book_mskib7r7_v9kr8a",
+      "amount": 300,
+      "paymentMethod": "WALLET",
+      "type": "HOLD",
+      "status": "SUCCESS",
+      "createdAt": "2026-08-08T14:53:27.742Z",
+      "updatedAt": "2026-08-08T15:06:35.398Z"
+    },
+    {
+      "id": "txn_1786203643743",
+      "walletId": "wal_customer_1",
+      "parcelId": "par_mskjf08z_cuvdz8",
+      "bookingId": "book_mskjmhc9_kv0r0q",
+      "amount": 300,
+      "paymentMethod": "WALLET",
+      "type": "HOLD",
+      "status": "SUCCESS",
+      "createdAt": "2026-08-08T15:40:43.743Z",
+      "updatedAt": "2026-08-08T15:43:20.652Z"
+    },
+    {
+      "id": "txn_1786208779754",
+      "walletId": "wal_traveller_1",
+      "parcelId": "par_mskjf08z_cuvdz8",
+      "bookingId": "book_mskjmhc9_kv0r0q",
+      "amount": 300,
+      "paymentMethod": "WALLET",
+      "type": "CREDIT",
+      "status": "SUCCESS",
+      "createdAt": "2026-08-08T17:06:19.754Z"
+    },
+    {
+      "id": "txn_1786246358298",
+      "walletId": "wal_customer_1",
+      "parcelId": "par_msl8tva6_67u0zz",
+      "bookingId": "book_msl91tjs_jef1tj",
+      "amount": 300,
+      "paymentMethod": "WALLET",
+      "type": "HOLD",
+      "status": "SUCCESS",
+      "createdAt": "2026-08-09T03:32:38.298Z",
+      "updatedAt": "2026-08-09T03:35:06.718Z"
+    },
+    {
+      "id": "txn_1786246603896",
+      "walletId": "wal_customer_1",
+      "parcelId": "par_msl8tva6_67u0zz",
+      "bookingId": "book_msl91tjs_jef1tj",
+      "amount": 300,
+      "paymentMethod": "WALLET",
+      "type": "REFUND",
+      "status": "SUCCESS",
+      "createdAt": "2026-08-09T03:36:43.896Z"
+    },
+    {
+      "id": "txn_1786249442573",
+      "walletId": "wal_customer_1",
+      "parcelId": "par_mslaqn98_zp8boz",
+      "bookingId": "book_mslauwqx_2ztbs5",
+      "amount": 300,
+      "paymentMethod": "WALLET",
+      "type": "HOLD",
+      "status": "SUCCESS",
+      "createdAt": "2026-08-09T04:24:02.573Z",
+      "updatedAt": "2026-08-09T04:25:43.501Z"
+    },
+    {
+      "id": "txn_1786249607520",
+      "walletId": "wal_customer_1",
+      "parcelId": "par_mslaqn98_zp8boz",
+      "bookingId": "book_mslauwqx_2ztbs5",
+      "amount": 300,
+      "paymentMethod": "WALLET",
+      "type": "REFUND",
+      "status": "SUCCESS",
+      "createdAt": "2026-08-09T04:26:47.520Z"
+    },
+    {
+      "id": "txn_1786250671118",
+      "walletId": "wal_customer_1",
+      "parcelId": "par_mslbi4mw_jo5mz8",
+      "bookingId": "book_mslbjvbb_aqjsmt",
+      "amount": 300,
+      "paymentMethod": "WALLET",
+      "type": "HOLD",
+      "status": "SUCCESS",
+      "createdAt": "2026-08-09T04:44:31.118Z",
+      "updatedAt": "2026-08-09T04:45:08.046Z"
+    },
+    {
+      "id": "txn_1786250737845",
+      "walletId": "wal_customer_1",
+      "parcelId": "par_mslbi4mw_jo5mz8",
+      "bookingId": "book_mslbjvbb_aqjsmt",
+      "amount": 300,
+      "paymentMethod": "WALLET",
+      "type": "REFUND",
+      "status": "SUCCESS",
+      "createdAt": "2026-08-09T04:45:37.845Z"
+    },
+    {
+      "id": "txn_1786251150515",
+      "walletId": "wal_customer_1",
+      "parcelId": "par_mslbsq39_z5op37",
+      "bookingId": null,
+      "amount": 300,
+      "paymentMethod": "WALLET",
+      "type": "HOLD",
+      "status": "SUCCESS",
+      "createdAt": "2026-08-09T04:52:30.515Z"
+    },
+    {
+      "id": "txn_1786259552200",
+      "walletId": "wal_customer_1",
+      "parcelId": "par_mslgnq2s_m6o1za",
+      "bookingId": null,
+      "amount": 300,
+      "paymentMethod": "WALLET",
+      "type": "HOLD",
+      "status": "SUCCESS",
+      "createdAt": "2026-08-09T07:12:32.200Z"
+    },
+    {
+      "id": "txn_1786260445185",
+      "walletId": "wal_customer_1",
+      "parcelId": "par_mslhbz3g_tgyhpu",
+      "bookingId": null,
+      "amount": 300,
+      "paymentMethod": "WALLET",
+      "type": "HOLD",
+      "status": "SUCCESS",
+      "createdAt": "2026-08-09T07:27:25.185Z"
+    },
+    {
+      "id": "txn_1786260826549",
+      "walletId": "wal_customer_1",
+      "parcelId": "par_mslhiz3n_gottaq",
+      "bookingId": "book_mslhn9hl_6071ty",
+      "amount": 300,
+      "paymentMethod": "WALLET",
+      "type": "HOLD",
+      "status": "SUCCESS",
+      "createdAt": "2026-08-09T07:33:46.549Z",
+      "updatedAt": "2026-08-09T07:35:44.076Z"
+    },
+    {
+      "id": "txn_1786261339961",
+      "walletId": "wal_traveller_1",
+      "parcelId": "par_mslhiz3n_gottaq",
+      "bookingId": "book_mslhn9hl_6071ty",
+      "amount": 300,
+      "paymentMethod": "WALLET",
+      "type": "CREDIT",
+      "status": "SUCCESS",
+      "createdAt": "2026-08-09T07:42:19.961Z"
+    },
+    {
+      "id": "txn_1786262075010",
+      "walletId": "wal_customer_1",
+      "parcelId": "par_msli7s16_jag1p2",
+      "bookingId": "book_msliclc7_z5pb3r",
+      "amount": 300,
+      "paymentMethod": "WALLET",
+      "type": "HOLD",
+      "status": "SUCCESS",
+      "createdAt": "2026-08-09T07:54:35.011Z",
+      "updatedAt": "2026-08-09T07:55:25.833Z"
+    },
+    {
+      "id": "txn_1786264139206",
+      "walletId": "wal_traveller_1",
+      "parcelId": "par_msli7s16_jag1p2",
+      "bookingId": "book_msliclc7_z5pb3r",
+      "amount": 300,
+      "paymentMethod": "WALLET",
+      "type": "CREDIT",
+      "status": "SUCCESS",
+      "createdAt": "2026-08-09T08:28:59.206Z"
+    },
+    {
+      "id": "txn_1786264967642",
+      "walletId": "wal_customer_1",
+      "parcelId": "par_msljzs6k_go07i4",
+      "bookingId": "book_mslk3cdb_7vjykw",
+      "amount": 300,
+      "paymentMethod": "WALLET",
+      "type": "HOLD",
+      "status": "SUCCESS",
+      "createdAt": "2026-08-09T08:42:47.642Z",
+      "updatedAt": "2026-08-09T08:44:13.539Z"
+    },
+    {
+      "id": "txn_1786265398211",
+      "walletId": "wal_customer_1",
+      "parcelId": "par_msljzs6k_go07i4",
+      "bookingId": "book_mslk3cdb_7vjykw",
+      "amount": 300,
+      "paymentMethod": "WALLET",
+      "type": "REFUND",
+      "status": "SUCCESS",
+      "createdAt": "2026-08-09T08:49:58.212Z"
+    }
+  ]
+}

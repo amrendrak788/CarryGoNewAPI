@@ -1,0 +1,26 @@
+{
+  "name": "safardrop-backend",
+  "version": "1.0.0",
+  "description": "Localhost MVC backend API for SafarDrop parcel delivery POC.",
+  "main": "src/server.js",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node src/server.js",
+    "seed": "node src/database/seed.js"
+  },
+  "keywords": [
+    "safardrop",
+    "mvc",
+    "api",
+    "parcel-delivery"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^17.4.2",
+    "jsonwebtoken": "^9.0.3",
+    "pg": "^8.23.0"
+  }
+}
