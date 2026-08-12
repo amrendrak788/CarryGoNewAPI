@@ -9,7 +9,7 @@ pool.on("error", (err) => {
 });
 
 async function testConnection() {
-
+    const result = await pool.query(`
         SELECT
             current_database() AS database,
             current_schema() AS schema,
