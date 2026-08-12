@@ -12,17 +12,18 @@ async function testConnection() {
     const result = await pool.query(`
         SELECT
             current_database() AS database_name,
-            current_user AS db_user,
-            inet_server_addr() AS server_ip,
-            inet_server_port() AS server_port,
-            current_setting('server_version') AS postgres_version,
-            to_regclass('public.users') AS users_table,
-            to_regclass('public.sessions') AS sessions_table
+            current_schema() AS schema_name,
+            current_setting('search_path') AS search_path,
+            EXISTS (
+                SELECT 1
+                FROM information_schema.tables
+                WHERE table_schema = 'public'
+                AND table_name = 'users'
+            ) AS users_exists
     `);
 
-    console.log("POSTGRES IDENTITY:", result.rows[0]);
+    console.log("POSTGRES CHECK:", result.rows[0]);
 }
-
 module.exports = {
     pool,
     testConnection
