@@ -7,7 +7,13 @@ const pool = new Pool({
     user: process.env.DB_USER,
     password: process.env.DB_PASSWORD
 });
-
+console.log("PostgreSQL config:", {
+    host: process.env.DB_HOST,
+    port: process.env.DB_PORT,
+    database: process.env.DB_NAME,
+    user: process.env.DB_USER,
+    passwordSet: !!process.env.DB_PASSWORD
+});
 pool.on("error", (err) => {
     console.error("Unexpected PostgreSQL error:", err);
 });
