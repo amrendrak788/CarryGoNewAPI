@@ -14,6 +14,6 @@ server.listen(port, "0.0.0.0", async () => {
     try {
         await testConnection();
     } catch (err) {
-        console.error("PostgreSQL connection FAILED:", err.message);
+        console.error("PostgreSQL connection FAILED:", err);
     }
 });
