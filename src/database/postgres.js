@@ -10,14 +10,14 @@ pool.on("error", (err) => {
 
 async function testConnection() {
 
-    const result = await pool.query(
-        "SELECT NOW() AS current_time"
-    );
+        SELECT
+            current_database() AS database,
+            current_schema() AS schema,
+            to_regclass('public.users') AS users_table,
+            to_regclass('public.sessions') AS sessions_table
+    `);
 
-    console.log(
-        "PostgreSQL connected:",
-        result.rows[0].current_time
-    );
+    console.log("PostgreSQL check:", result.rows[0]);
 }
 
 module.exports = {
