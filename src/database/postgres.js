@@ -11,13 +11,16 @@ pool.on("error", (err) => {
 async function testConnection() {
     const result = await pool.query(`
         SELECT
-            current_database() AS database,
-            current_schema() AS schema,
+            current_database() AS database_name,
+            current_user AS db_user,
+            inet_server_addr() AS server_ip,
+            inet_server_port() AS server_port,
+            current_setting('server_version') AS postgres_version,
             to_regclass('public.users') AS users_table,
             to_regclass('public.sessions') AS sessions_table
     `);
 
-    console.log("PostgreSQL check:", result.rows[0]);
+    console.log("POSTGRES IDENTITY:", result.rows[0]);
 }
 
 module.exports = {
