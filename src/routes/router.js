@@ -167,7 +167,44 @@ const routes = [
         params: ["id"]
     },
 
+/*
+ * =========================================
+ * CUSTOMER WALLET
+ * =========================================
+ */
 
+{
+    method: "GET",
+    path: /^\/api\/customers\/wallet$/,
+    handler: CustomerController.wallet,
+    auth: true,
+    role: "customer"
+},
+
+{
+    method: "POST",
+    path: /^\/api\/customers\/wallet\/add-money$/,
+    handler: CustomerController.addMoney,
+    auth: true,
+    role: "customer"
+},
+
+{
+    method: "POST",
+    path: /^\/api\/customers\/wallet\/add-money\/([^/]+)\/confirm$/,
+    handler: CustomerController.confirmAddMoney,
+    auth: true,
+    role: "customer",
+    params: ["id"]
+},
+
+{
+    method: "GET",
+    path: /^\/api\/customers\/wallet\/topups$/,
+    handler: CustomerController.topups,
+    auth: true,
+    role: "customer"
+},
     /*
      * =========================================
      * TRAVELLER

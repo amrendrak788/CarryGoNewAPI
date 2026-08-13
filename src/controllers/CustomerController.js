@@ -4,7 +4,12 @@ const {
 const {
     CustomerService
 } = require("../services/CustomerService");
-
+const {
+    PostgresPaymentService
+} = require("../services/PostgresPaymentService");
+const {
+    PostgresWalletService
+} = require("../services/PostgresWalletService");
 const {
     created,
     error,
@@ -14,10 +19,6 @@ const {
 const {
     Messages
 } = require("../constants/messages");
-
-const {
-PostgresPaymentService
-} = require("../services/PostgresPaymentService");
 
 class CustomerController {
 
@@ -295,7 +296,153 @@ class CustomerController {
 
 }
 
+/*
+ * =========================================
+ * WALLET
+ * =========================================
+ */
 
+static async wallet(req, res) {
+
+    try {
+
+        ok(
+            res,
+            await PostgresWalletService.getWallet(
+                req.auth.user
+            ),
+            "Wallet fetched successfully"
+        );
+
+    } catch (err) {
+
+        error(
+            res,
+            err.statusCode || 500,
+            err.message,
+            err.code,
+            err.details
+        );
+
+    }
+
+}
+
+
+/*
+ * =========================================
+ * ADD MONEY
+ *
+ * Currently MANUAL.
+ * Later Razorpay will use the same
+ * topup system.
+ * =========================================
+ */
+
+static async addMoney(req, res) {
+
+    try {
+
+        const result =
+            await PostgresWalletService.createTopup(
+                req.auth.user,
+                req.body.amount
+            );
+
+        created(
+            res,
+            result,
+            "Add money request created successfully"
+        );
+
+    } catch (err) {
+
+        error(
+            res,
+            err.statusCode || 500,
+            err.message,
+            err.code,
+            err.details
+        );
+
+    }
+
+}
+
+
+/*
+ * =========================================
+ * CONFIRM ADD MONEY
+ *
+ * CURRENTLY MANUAL
+ *
+ * Later Razorpay verification will happen
+ * before this service is called.
+ * =========================================
+ */
+
+static async confirmAddMoney(req, res) {
+
+    try {
+
+        const result =
+            await PostgresWalletService.confirmTopup(
+                req.auth.user,
+                req.params.id
+            );
+
+        ok(
+            res,
+            result,
+            "Money added to wallet successfully"
+        );
+
+    } catch (err) {
+
+        error(
+            res,
+            err.statusCode || 500,
+            err.message,
+            err.code,
+            err.details
+        );
+
+    }
+
+}
+
+
+/*
+ * =========================================
+ * WALLET TOPUP HISTORY
+ * =========================================
+ */
+
+static async topups(req, res) {
+
+    try {
+
+        ok(
+            res,
+            await PostgresWalletService.topups(
+                req.auth.user
+            ),
+            "Wallet topups fetched successfully"
+        );
+
+    } catch (err) {
+
+        error(
+            res,
+            err.statusCode || 500,
+            err.message,
+            err.code,
+            err.details
+        );
+
+    }
+
+}
     /*
      * =========================================
      * CANCEL BOOKING

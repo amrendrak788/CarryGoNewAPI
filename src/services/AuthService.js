@@ -12,6 +12,8 @@ const { Messages } = require("../constants/messages");
 const { Roles } = require("../constants/roles");
 const AppError = require("../utils/AppError");
 const { ResponseCodes } = require("../constants/responseCodes");
+const PostgresWalletModel =
+    require("../models/PostgresWalletModel");
 
 class AuthService {
 
@@ -53,60 +55,157 @@ class AuthService {
     }
 
 
-    static async signup(body) {
+   static async signup(body) {
 
-        Validator.signup(body);
+    Validator.signup(body);
 
-        const exists =
-            await PostgresUserModel.existsByMobile(
-                body.mobile
-            );
 
-        if (exists) {
+    /*
+     * -----------------------------------------
+     * CHECK EXISTING USER
+     * -----------------------------------------
+     */
 
-            throw new AppError(
-                400,
-                ResponseCodes.DUPLICATE_RECORD,
-                Messages.MOBILE_ALREADY_EXISTS
-            );
-        }
+    const exists =
+        await PostgresUserModel.existsByMobile(
+            body.mobile
+        );
 
-        const user =
-            await PostgresUserModel.create({
 
-                id: createId("usr"),
+    if (exists) {
 
-                name: body.name,
+        throw new AppError(
+            400,
+            ResponseCodes.DUPLICATE_RECORD,
+            Messages.MOBILE_ALREADY_EXISTS
+        );
 
-                mobile: body.mobile,
+    }
 
-                password: body.password,
 
-                selectedRole: null,
+    /*
+     * -----------------------------------------
+     * CREATE USER
+     * -----------------------------------------
+     */
 
-                city: body.city || "Delhi"
+    const user =
+        await PostgresUserModel.create({
 
-            });
+            id:
+                createId("usr"),
 
-        const token = generateToken(user);
+            name:
+                body.name,
 
-        await PostgresSessionModel.createSession({
+            mobile:
+                body.mobile,
 
-            id: createId("ses"),
+            password:
+                body.password,
 
-            token,
+            selectedRole:
+                null,
 
-            userId: user.id,
-
-            createdAt: now()
+            city:
+                body.city || "Delhi"
 
         });
 
-        return {
-            token,
-            user: AuthService.safeUser(user)
-        };
+
+    /*
+     * -----------------------------------------
+     * CREATE WALLET
+     *
+     * Signup ke time:
+     *
+     * balance      = 0
+     * holdBalance  = 0
+     * currency     = INR
+     * status       = ACTIVE
+     * -----------------------------------------
+     */
+
+    let wallet;
+
+    try {
+
+        wallet =
+            await PostgresWalletModel
+                .createForUser(
+                    user.id
+                );
+
+    } catch (walletError) {
+
+        /*
+         * User create ho gaya lekin wallet
+         * create nahi hua to error hide
+         * nahi karna hai.
+         */
+
+        console.error(
+            "Wallet creation failed during signup:",
+            walletError
+        );
+
+        throw walletError;
+
     }
+
+
+    /*
+     * -----------------------------------------
+     * CREATE JWT TOKEN
+     * -----------------------------------------
+     */
+
+    const token =
+        generateToken(user);
+
+
+    /*
+     * -----------------------------------------
+     * CREATE SESSION
+     * -----------------------------------------
+     */
+
+    await PostgresSessionModel.createSession({
+
+        id:
+            createId("ses"),
+
+        token,
+
+        userId:
+            user.id,
+
+        createdAt:
+            now()
+
+    });
+
+
+    /*
+     * -----------------------------------------
+     * RESPONSE
+     * -----------------------------------------
+     */
+
+    return {
+
+        token,
+
+        user:
+            AuthService.safeUser(
+                user
+            ),
+
+        wallet
+
+    };
+
+}
 
 
     static async selectMode(user, role) {
